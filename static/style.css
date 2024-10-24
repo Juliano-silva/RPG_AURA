@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: #252525;
+    color: white;
+}
+
+/* Ficha RPG */
+
+:is(input, textarea)::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+#Form-Lor {
+    background-image: url("https://movimentorpg.com.br/wp-content/uploads/2022/06/RETROPUNK-TEXTO-61.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    width: 40%;
+    height: 40vh;
+    padding: 2vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    border-radius: 2vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Form-Lor> :is(input, textarea) {
+    all: unset;
+    display: block;
+    padding: 2vh;
+    width: 20vh;
+    height: 5vh;
+    text-align: center;
+    border: 0.2vh solid rgb(189, 23, 23);
+    background-color: rgb(41, 10, 16);
+    border-radius: 2vh;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: 2vh;
+    color: white;
+}
+
+
+#Form-Estatisticas {
+    background-image: url("https://i.pinimg.com/564x/ea/d4/6a/ead46ac5411e9b9eda3c3055444e2112.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 40vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    text-align: center;
+    border-radius: 2vh;
+    overflow: auto;
+}
+
+#Estatisticas> :is(label, input) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Form-Perícias {
+    background-image: url("https://preview.redd.it/7nx8j0o79q631.png?width=2539&format=png&auto=webp&s=0c5270df7cad195f3d20cba7ffdd317ed753c2d0");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55%;
+    height: 50vh;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 2vh;
+    margin-right: 2vh;
+}
+
+#Perícias>input {
+    display: block;
+    margin: auto;
+}
+
+#Form-Status {
+    background-image: url("https://loja.retropunk.com.br/img/cms/RPG.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 40vh;
+    position: absolute;
+    margin-top: -36vh;
+    margin-left: 75vh;
+}
+
+#Form-Status>input {
+    display: block;
+    margin: auto;
+    margin-top: 2vh
+}
+
+
+
+
+#Form-Inventário {
+    background-color: purple;
+    width: 80%;
+    display: block;
+    height: 20vh;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+
+#TABLET {
+    border: 0.2vh solid white;
+    width: 40%;
+    display: block;
+    margin: auto;
+    height: 80vh;
+}
+
+form>input {
+    display: block;
+}
+
+/* Index */
+
+#Header {
+    background-color: rgb(53, 28, 28);
+    display: flex;
+    justify-content: center
+}
+
+#Header>a {
+    all: unset;
+    cursor: pointer;
+    padding: 2vh;
+}
+
+#Header>a:hover {
+    color: yellow;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Tablet */
+
+#Tablet {
+    border: 0.2vh solid white;
+    background-color: brown;
+    width: 40%;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2vh;
+    height: 90vh;
+}
+
+#Color_Orb {
+    all: unset;
+    -webkit-appearance: none;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    margin-top: 2vh;
+}
+
+#Color_Orb::-webkit-color-swatch {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#Color_Orb::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#Caixa_Tablet {
+    background-color: #130e0e;
+    width: 80%;
+    border-radius: 2vh;
+    margin: auto;
+    height: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
