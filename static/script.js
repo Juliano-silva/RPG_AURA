@@ -198,7 +198,7 @@ function Salvar(){
 
 var Elementos = JSON.parse(localStorage.getItem("Elementos"))
 
-for(var i = 0 ; i < Elementos.length; i++){
+for(var i = 0 ; i < Elementos?.length; i++){
     var Caixa = document.createElement("div")
     Caixa.innerHTML = `
     <input type="color" value=${Elementos[i].Aura}/>
@@ -211,7 +211,7 @@ for(var i = 0 ; i < Elementos.length; i++){
 
 var Equipamentos = JSON.parse(localStorage.getItem("Equipamentos"))
 
-for(var i = 0 ; i < Equipamentos.length; i++){
+for(var i = 0 ; i < Equipamentos?.length; i++){
     var Caixa = document.createElement("div")
     Caixa.innerHTML = `
     <h1>${(String(Equipamentos[i].Item[0].Dados).split(":")[1])}</h1>
