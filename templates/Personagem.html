@@ -11,11 +11,19 @@
     <input type="text" placeholder="Imagem">
     <textarea id="Aparencia"></textarea>
     <textarea id="Notas"></textarea>
-    <form id="Form-Inventário">
+    <div id="Form-Inventário">
         <label>Inventário</label>
-        <input type="text">
-        <button onclick="Adicionar()">Adicionar</button>
-    </form>
+        <div id="Conteudo_Inventario"></div>
+        <div id="Inventário_Creater">
+            <select id="Tipo_Itens"></select>
+            <form id="Itens_Creater"></form>
+            <button onclick="Salvar()">Salvar Equipamentos</button>
+        </div>
+        <button id="Add_Itens">Adicionar</button>
+    </div>
+
+
+    <div id="Equip_Personagem"></div>
 </body>
 <script src="../static/script.js"></script>
 </html>

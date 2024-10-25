@@ -12,10 +12,6 @@ body {
 
 /* Ficha RPG */
 
-:is(input, textarea)::placeholder {
-    color: rgb(0, 0, 0);
-}
-
 #Form-Lor {
     background-image: url("https://movimentorpg.com.br/wp-content/uploads/2022/06/RETROPUNK-TEXTO-61.jpg");
     background-position: center;
@@ -37,26 +33,21 @@ body {
 #Form-Lor> :is(input, textarea) {
     all: unset;
     display: block;
-    padding: 2vh;
-    width: 20vh;
+    width: 40%;
     height: 5vh;
     text-align: center;
-    border: 0.2vh solid rgb(189, 23, 23);
-    background-color: rgb(41, 10, 16);
+    border-bottom: 0.6vh solid white;
     border-radius: 2vh;
     justify-content: center;
     justify-items: center;
     align-items: center;
+    font-size: 3vh;
     margin-left: 2vh;
     color: white;
 }
 
 
 #Form-Estatisticas {
-    background-image: url("https://i.pinimg.com/564x/ea/d4/6a/ead46ac5411e9b9eda3c3055444e2112.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 35%;
     height: 40vh;
     margin-top: 2vh;
@@ -64,6 +55,10 @@ body {
     text-align: center;
     border-radius: 2vh;
     overflow: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    justify-items: center;
 }
 
 #Estatisticas> :is(label, input) {
@@ -72,10 +67,6 @@ body {
 }
 
 #Form-Perícias {
-    background-image: url("https://preview.redd.it/7nx8j0o79q631.png?width=2539&format=png&auto=webp&s=0c5270df7cad195f3d20cba7ffdd317ed753c2d0");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 55%;
     height: 50vh;
     overflow: auto;
@@ -84,6 +75,32 @@ body {
     right: 0;
     margin-top: 2vh;
     margin-right: 2vh;
+    display: flex;
+    flex-flow: wrap;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+:is(#Form-Perícias,#Form-Estatisticas,#Form-Status) > input{
+    all: unset;
+    border-bottom: 0.4vh solid white;
+    color: white;
+    width: 17%;
+    height: 4vh;
+    text-align: center;
+    margin-left: 2vh;
+    margin-top: 0.5vh;
+    font-size: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#Form-Estatisticas > input{
+    width: 45%;
+}
+
+:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status) > :is(input, textarea)::placeholder{
+    color: white;
 }
 
 #Perícias>input {
@@ -92,24 +109,35 @@ body {
 }
 
 #Form-Status {
-    background-image: url("https://loja.retropunk.com.br/img/cms/RPG.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 60%;
     height: 40vh;
     position: absolute;
     margin-top: -36vh;
     margin-left: 75vh;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    justify-items: center;
 }
 
 #Form-Status>input {
     display: block;
     margin: auto;
-    margin-top: 2vh
+    margin-top: 10vh
 }
 
 
+#Form-Lor,#Form-Status,#Form-Perícias,#Form-Estatisticas {
+    background-image: url("https://i.pinimg.com/564x/8f/85/39/8f85399e97f563c4b8347d45cf77cbf6.jpg");
+    -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: blur(8vh);
+}
 
 
 #Form-Inventário {
@@ -203,4 +231,14 @@ iframe {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#Add_Tablet,#Inventário_Creater{
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
