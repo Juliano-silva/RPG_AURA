@@ -118,7 +118,7 @@ function Load() {
 } Load()
 
 
-document.getElementById("Remover_Dados").addEventListener("click",function(){
+document.getElementById("Remover_Dados")?.addEventListener("click",function(){
     location.reload()
 })
 
@@ -164,7 +164,7 @@ function STATUS_FORM() {
 
 
 function Carregar() {
-    var ElementoPrimario = JSON.parse(localStorage.getItem("ELEMENTO_PRINCIPAL"))
+    var ElementoPrimario = JSON.parse(localStorage.getItem("ElementoPrincipal"))
 
     Body_Lor.forEach(function (conteudo) {
         conteudo.Jogador.value = Buscar[0].Name_Jogador
@@ -219,8 +219,10 @@ function Carregar() {
         }
     })
 
+    if(localStorage.ElementoPrincipal){
         document.getElementById("Elemento_Escolha").innerText = ElementoPrimario[0].Name
         document.getElementById("Color_Orb").value = ElementoPrimario[0].Aura
+    }
 
 }
 
@@ -319,7 +321,7 @@ function add_elements() {
         "Name": document.getElementById("Elementos_Principal").value
     })
 
-    localStorage.setItem("ELEMENTO_PRINCIPAL", JSON.stringify(array))
+    localStorage.setItem("ElementoPrincipal", JSON.stringify(array))
 
 }
 
