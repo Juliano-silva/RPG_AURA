@@ -131,11 +131,27 @@ function Add(Childr, Eventos) {
             
             array.push({
                 Dados: element?.children.item(i)?.children.item(1).name + ":" + element?.children.item(i)?.children.item(1).value
-            })
+            })            
         }
     })
     return array
 }
+
+function Add2(Childr,Eventos){
+    var Childs = Array.from(Childr);
+    var array = new Array()
+    Eventos?.forEach(function(element,index){        
+        var NameChild = Childs[index]?.getAttribute('name');       
+        var Value = Childs[index]?.value;       
+                
+        array.push({
+            Dados: NameChild + ":" + Value
+        })
+
+    })
+    return array   
+}
+
 
 form?.addEventListener("change", STATUS_FORM)
 Status_form?.addEventListener("change", STATUS_FORM)
@@ -228,12 +244,12 @@ function Carregar() {
 
 function Salvar() {
     if (localStorage.Equipamentos) {
-        Equipamentoss = JSON.parse(localStorage.getItem("Equipamentos"))
+        array = JSON.parse(localStorage.getItem("Equipamentos"))
     }
 
-    Equipamentoss.push({ "Item": Add(Body_Creater, Inventario_Escolhas) })
+    array.push({ "Item": Add2(Body_Creater, Inventario_Escolhas) })
 
-    localStorage.setItem("Equipamentos", JSON.stringify(Equipamentoss))
+    localStorage.setItem("Equipamentos", JSON.stringify(array))
 
 }
 
@@ -279,8 +295,8 @@ var Equipamentos = JSON.parse(localStorage.getItem("Equipamentos"))
 for (var i = 0; i < Equipamentos?.length; i++) {
     var Caixa = document.createElement("div")
     for (var j = 1; j < 6; j++) {
-        var Valores = String(Equipamentos[i].Item[j - 1].Dados).split(":")[1]
-        var Names = String(Equipamentos[i].Item[j - 1].Dados).split(":")[0]
+        var Valores = String(Equipamentos[i].Item[j - 1]?.Dados).split(":")[1]
+        var Names = String(Equipamentos[i].Item[j - 1]?.Dados).split(":")[0]
         if (Valores != "undefined") {
             Caixa.innerHTML += `<h${j}>${Names}: ${Valores}</h${j}>`
         }
@@ -298,10 +314,10 @@ document.getElementById("Adicionar_Personagem")?.addEventListener("click", funct
 
 function Adicionar_Elementos() {
     if (localStorage.Elementos) {
-        Elementos = JSON.parse(localStorage.getItem("Elementos"))
+        array = JSON.parse(localStorage.getItem("Elementos"))
     }
 
-    Elementos.push({
+    array.push({
         "Aura": document.getElementById("elemento_Color").value,
         "Nome": document.getElementById("Name").value,
         "Elemento": document.getElementById("Elementos").value,
@@ -309,7 +325,7 @@ function Adicionar_Elementos() {
         "description": document.getElementById("description").value
     })
 
-    localStorage.setItem("Elementos", JSON.stringify(Elementos));
+    localStorage.setItem("Elementos", JSON.stringify(array));
 
 }
 
