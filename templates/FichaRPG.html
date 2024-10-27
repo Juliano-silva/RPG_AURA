@@ -10,23 +10,29 @@
     
 
 <form id="Form-Lor">
-    <input type="text" name="Jogador" placeholder="Nome do Jogador">
-    <input type="text" name="Personagem" placeholder="Nome do Personagem">
-    <input type="number" name="Idade" placeholder="Idade do Personagem">
-    <input type="text" name="Ocupation" placeholder="Ocupação do Personagem">
-    <input type="text" name="Sexo" placeholder="Sexo do Personagem">
-    <textarea id="Lor" name="História" placeholder="História do Personagem"></textarea>
+    <label>Nome do Jogador: <input type="text" name="Jogador" placeholder="Nome do Jogador"></label>
+    <label>Nome do Personagem: <input type="text" name="Personagem" placeholder="Nome do Personagem"></label>
+    <label>Idade do Personagem: <input type="number" name="Idade" placeholder="Idade do Personagem"></label>
+    <label>Ocupação do Personagem: <input type="text" name="Ocupation" placeholder="Ocupação do Personagem"></label>
+    <label>Sexo do Personagem: <input type="text" name="Sexo" placeholder="Sexo do Personagem"></label>
+    <label>História do Personagem: <textarea id="Lor" name="História" placeholder="História do Personagem"></textarea></label>
 </form>
 
 <form id="Form-Estatisticas"></form>
 
 <form id="Form-Perícias"></form>
 
+<div id="Rolagem_dados">
+    <button id="Remover_Dados">❌</button>
+    <div id="Dados_Escolhidos"></div>
+    <h1 id="Dados_Title"></h1>
+</div>
+
 <form id="Form-Status">
-    <input type="number" name="Life" placeholder="Life">
-    <input type="number" name="Magia" placeholder="Magia">
-    <input type="number" name="Sanidade" placeholder="Sanidade">
-   <input type="number" name="Sorte" placeholder="Sorte">
+    <label>Life: <input type="number" name="Life" placeholder="Life"></label>
+    <label>Magia: <input type="number" name="Magia" placeholder="Magia"></label>
+    <label>Sanidade: <input type="number" name="Sanidade" placeholder="Sanidade"></label>
+    <label>Sorte: <input type="number" name="Sorte" placeholder="Sorte"></label>
 </form>
 
 </body>

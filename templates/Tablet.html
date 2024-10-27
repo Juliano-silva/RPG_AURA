@@ -8,20 +8,34 @@
 </head>
 <body>
     <div id="Tablet">
-        <div id="Caixa_Tablet">
-            <input type="color" id="Color_Orb">
-            <h1>AURA DE <span id="Elemento">FOGO</span></h1>
-            <div id="Conteudo_Tablet"></div>
-            <button id="Adicionar">+</button>
-            <div id="Add_Tablet">
-                <input type="color" id="elemento_Color">
-                <input type="text" id="Elemento">
-                <input type="text" id="Name">
-                <input type="number" id="quantidade">
-                <textarea id="description"></textarea>
-                <button onclick="Adicionar_Elementos()">Adicionar</button>
-            </div>
+        <button id="Add_Elemento" >Adicionar meu Elemento</button>
+        <div id="Auro_Principal">
+            <input type="color" id="Color_Orb" value="#ffffff">
+            <h1>AURA DE <span id="Elemento_Escolha"></span></h1>
         </div>
+        <div id="Auras_Secundárias">
+            <input type="color" id="Color_Orb1" value="#ffffff">
+            <input type="color" id="Color_Orb2" value="#ffffff">
+            <input type="color" id="Color_Orb3" value="#ffffff">
+            <input type="color" id="Color_Orb4" value="#ffffff">
+        </div>
+        <div id="Caixa_Tablet">
+            <div id="Conteudo_Tablet"></div>
+            <button id="Adicionar">Adicionar um Encantamento</button>
+        </div>
+    </div>
+    <div id="Primeiro_Elemento">
+        <input type="color" id="elemento_Color_Principal">
+        <input type="text" id="Elementos_Principal" placeholder="Elemento">
+        <button onclick="add_elements()">Adicionar</button>
+    </div>
+    <div id="Add_Tablet">
+        <input type="color" id="elemento_Color">
+        <input type="text" id="Elementos" placeholder="Elemento ">
+        <input type="text" id="Name" placeholder="Nome do Elemento">
+        <input type="number" id="quantidade" placeholder="Quantidade de Elementos">
+        <textarea id="description" placeholder="Descrição do Item"></textarea>
+        <button onclick="Adicionar_Elementos()">Adicionar</button>
     </div>
 </body>
 <script src="../static/script.js"></script>

@@ -10,10 +10,13 @@ body {
     color: white;
 }
 
+*::-webkit-scrollbar{
+    width: 0px;
+}
+
 /* Ficha RPG */
 
 #Form-Lor {
-    background-image: url("https://movimentorpg.com.br/wp-content/uploads/2022/06/RETROPUNK-TEXTO-61.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,21 +33,7 @@ body {
     flex-wrap: wrap;
 }
 
-#Form-Lor> :is(input, textarea) {
-    all: unset;
-    display: block;
-    width: 40%;
-    height: 5vh;
-    text-align: center;
-    border-bottom: 0.6vh solid white;
-    border-radius: 2vh;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    font-size: 3vh;
-    margin-left: 2vh;
-    color: white;
-}
+
 
 
 #Form-Estatisticas {
@@ -73,14 +62,16 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 2vh;
-    margin-right: 2vh;
     display: flex;
     flex-flow: wrap;
     justify-items: center;
     justify-content: center;
     margin: auto;
+    margin-top: 1vh;
+    border-radius: 2vh;
+    margin-right: 2vh;
 }
+
 
 :is(#Form-Perícias,#Form-Estatisticas,#Form-Status) > input{
     all: unset;
@@ -92,6 +83,7 @@ body {
     margin-left: 2vh;
     margin-top: 0.5vh;
     font-size: 2vh;
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -99,18 +91,80 @@ body {
     width: 45%;
 }
 
-:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status) > :is(input, textarea)::placeholder{
-    color: white;
-}
-
 #Perícias>input {
     display: block;
     margin: auto;
 }
 
+:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status) > label{
+    display: flex;
+    margin: auto;
+    margin-left: 2vh;
+    font-size: 2vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status) > label > :is(input,textarea){
+    all: unset;
+    display: block;
+    text-align: left;
+    padding: 1vh;
+    border: 0.2vh solid white;
+    margin-left: 2vh;
+    width: 40vh;
+}
+
+:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status) > label > :is(input, textarea)::placeholder{
+    color: white;
+}
+
+:is(#Form-Lor, #Form-Perícias,#Form-Estatisticas,#Form-Status){
+    overflow: auto;
+}
+
+:is(#Form-Estatisticas,#Form-Perícias) > div{
+    margin-top: 2vh;
+    display: flex;
+    text-align: left;
+    flex-flow: wrap column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2vh;
+    font-size: 2vh;
+    padding: 1vh;
+}
+
+:is(#Form-Estatisticas,#Form-Perícias) > div > label{
+    display: block;
+    font-size: 1.7vh;
+    text-align: center;
+}
+
+:is(#Form-Estatisticas,#Form-Perícias) > div  > input{
+    all: unset;
+    border: 0.2vh solid white;
+    text-align: center;
+    cursor: pointer;
+}
+
+:is(#Form-Estatisticas,#Form-Perícias) > div  > input::placeholder{
+    color: white;
+}
+
+:is(#Form-Estatisticas,#Form-Perícias) > div > h1{
+    border: 0.2vh solid black;
+    cursor: pointer;
+    font-size: 2vh;
+    text-align: center;
+    margin-top: 1vh;
+    background-color: black;
+    border-radius: 0.5vh;
+}
+
 #Form-Status {
     width: 60%;
-    height: 40vh;
+    height: 38vh;
     position: absolute;
     margin-top: -36vh;
     margin-left: 75vh;
@@ -118,6 +172,7 @@ body {
     flex-flow: wrap;
     justify-content: center;
     justify-items: center;
+    border-radius: 2vh;
 }
 
 #Form-Status>input {
@@ -126,9 +181,54 @@ body {
     margin-top: 10vh
 }
 
+#Rolagem_dados{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vh;
+    height: 80vh;
+    margin-top: -4vh;
+    background-color: #0e0c0c;
+    z-index: 3;
+    display: none;
+}
+
+#Dados_Escolhidos{
+    border: 0.2vh solid white;
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+    background-color: white;
+    text-align: center;
+    border-radius: 2vh;
+    font-size: 25vh;
+    color: black;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#Dados_Title{
+    text-align: center;
+    font-size: 3vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1vh;
+}
+
+#Rolagem_dados > button{
+    all: unset;
+    font-size: 4vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    cursor: pointer;
+}
+
 
 #Form-Lor,#Form-Status,#Form-Perícias,#Form-Estatisticas {
-    background-image: url("https://i.pinimg.com/564x/8f/85/39/8f85399e97f563c4b8347d45cf77cbf6.jpg");
+    background: radial-gradient(brown,black);
     -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
@@ -141,12 +241,24 @@ body {
 
 
 #Form-Inventário {
-    background-color: purple;
+    background-image: url("https://i.pinimg.com/564x/09/98/6e/09986e9739f3b54024c37fc7f684d471.jpg");
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 80%;
     display: block;
-    height: 20vh;
+    height: 70vh;
+    text-align: center;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 2vh;
+    border: 0.2vh solid white;
+    border-radius: 2vh;
+    color: black;
+    overflow: auto;
 }
 
 
@@ -165,15 +277,18 @@ form>input {
 /* Index */
 
 #Header {
-    background-color: rgb(53, 28, 28);
+    background-color: rgb(80, 4, 4);
     display: flex;
-    justify-content: center
+    height: 8vh;
+    align-items: center;
 }
 
 #Header>a {
     all: unset;
     cursor: pointer;
     padding: 2vh;
+    font-size: 4vh;
+    text-align: left;
 }
 
 #Header>a:hover {
@@ -189,8 +304,11 @@ iframe {
 
 #Tablet {
     border: 0.2vh solid white;
-    background-color: brown;
-    width: 40%;
+    background: radial-gradient(red,brown,brown,red);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60%;
     text-align: center;
     position: fixed;
     top: 50%;
@@ -200,45 +318,348 @@ iframe {
     height: 90vh;
 }
 
-#Color_Orb {
+input[type="color"] {
     all: unset;
     -webkit-appearance: none;
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
     margin-top: 2vh;
+    cursor: pointer;
+    border: 0.6vh solid white;
 }
 
-#Color_Orb::-webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 10px;
     padding: 0;
 }
 
-#Color_Orb::-webkit-color-swatch-wrapper {
+input[type="color"]::-webkit-color-swatch-wrapper {
     border: none;
     border-radius: 10px;
     padding: 0;
 }
 
 #Caixa_Tablet {
-    background-color: #130e0e;
+    background-color: #110a0a;
     width: 80%;
     border-radius: 2vh;
     margin: auto;
-    height: 90%;
+    height: 70%;
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: auto;
+    padding: 2vh;
 }
 
-#Add_Tablet,#Inventário_Creater{
+#Caixa_Tablet::-webkit-scrollbar{
+    width: 0px;
+}
+
+#Auro_Principal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 2vh;
+}
+
+#Auro_Principal > h1{
+    font-size: 4vh;
+}
+
+#Add_Tablet,#Inventário_Creater,#Primeiro_Elemento,#Creater_person{
+    background-color: #0e0c0c;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
+}
+
+#Title{
+    text-align: center;
+
+}
+
+#Adicionar_Personagem{
+    background-color: initial;
+    background-image: linear-gradient(#331452 0, #260942 100%);
+    border-radius: 3vh;
+    border-style: none;
+    box-shadow: rgba(245, 244, 247, .25) 0 0.2vh 0.2vh inset;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, sans-serif;
+    font-size: 3vh;
+    font-weight: 500;
+    height: 6vh;
+    line-height: 6vh;
+    display: block;
+    margin: auto;
+    outline: 0;
+    text-align: center;
+    transition: all .3s cubic-bezier(.05, .03, .35, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: bottom;
+    width: 30%;
+    margin-top: 2vh;
+}
+
+:is(#Add_Tablet,#Primeiro_Elemento) > :is(input[type="color"]){
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+    width: 20vh;
+    height: 20vh;
+}
+
+:is(#Add_Tablet,#Primeiro_Elemento,#Creater_person,#Itens_Creater) > :is(input[type="text"],input[type="number"]){
+    all: unset;
+    display: block;
+    margin: auto;
+    border-bottom: 0.4vh solid white;
+    padding-bottom: 2vh;
+    margin-top: 2vh;
+    width: 40%;
+    color: white;
+    text-align: center;
+}
+
+:is(#Add_Tablet,#Primeiro_Elemento,#Creater_person)> button,#Salvar_EP{
+    background-color: #222;
+    border-radius: 0.4vh;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 3vh;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 2vh;
+    min-width: 4vh;
+    outline: none;
+    overflow: hidden;
+    padding: 0.9vh 2vh 0.8vh;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20%;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+:is(#Add_Tablet,#Creater_person,#Itens_Creater) > textarea{
+    all: unset;
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+    width: 40%;
+    color: white;
+    height: 20vh;
+    border: 0.4vh solid white;
+}
+
+:is(#Add_Tablet,#Primeiro_Elemento,#Creater_person,#Itens_Creater) > :is(input,textarea)::placeholder{
+    color: white;
+}
+
+#Conteudo_Inventario > div{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left;
+    overflow: auto;
+    width: 100%;
+    height: 25vh;
+    padding: 2vh;
+    font-size: 3vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+select{
+    all: unset;
+    border: 0.2vh solid white;
+    color: white;
+    padding: 2vh;
+    width: 20%;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+option{
+    background-color: #0e0c0c;
+    color: white;
+    cursor: pointer;
+}
+
+#Add_Elemento,#Adicionar,#Add_Itens{
+    background: #FF4742;
+    border: 1vh solid #FF4742;
+    border-radius: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 2vh;
+    font-weight: 800;
+    line-height: 2vh;
+    outline: 0;
+    padding: 1vh 2vh;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin-top: 2vh;
+}
+
+#Add_Itens{
+    background: #201c1c;
+    border: 1vh solid #251b1a;
+}
+
+#Adicionar{
+    padding: 0.2vh;
+}
+
+#Auras_Secundárias{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3vh;
+    margin-right: 4vh;
+    display: flex;
+    width: 15vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+#Auras_Secundárias > input{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 1vh;
+}
+
+#Conteudo_Tablet > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    position: relative;
+    height: 15vh;
+}
+
+#Conteudo_Tablet > div > button{
+    all: unset;
+    font-size: 4vh;
+    top: 0;
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+}
+
+#Conteudo_Tablet > div > input[type="color"]{
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    left: 0;
+    margin-left: 2vh;
+    margin-top: -0.5vh;
+}
+
+#Conteudo_Tablet > div > h1{
+    font-size: 4vh;
+    width: 70%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+}
+
+#Conteudo_Tablet > div > h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2vh;
+    margin-left: 2vh;
+    margin-top: 2vh;
+}
+#Conteudo_Tablet > div > p{
+    width: 70%;
+    position: absolute;
+    margin-top: 10vh;
+    left: 0;
+    margin-left: 14.2vh;
+    height: 4vh;
+    text-align: left;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+#Conteudo_Tablet > div > input[type=number]{
+    all: unset;
+    position: absolute;
+    right: 0;
+    margin-right: 1vh;
+    border: 0.2vh solid white ;
+    border-radius: 0.2h;
+    background-color: rgb(94, 15, 15);
+    padding: 1vh;
+    width: 4vh;
+    height: 2vh;
+    text-align: center;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#Thumb_Person{
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 80vh;
+    overflow: auto;
+}
+
+
+#Thumb_Person > img{
+    width: 40vh;
+    height: 40vh;
+    display: block;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+#Thumb_Person > p{
+    font-size: 2.5vh;
+    margin-top: 2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: baseline;
 }

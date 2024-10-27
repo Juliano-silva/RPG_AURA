@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Seu Personagem</h1>
-    <input type="text" placeholder="Imagem">
-    <textarea id="Aparencia"></textarea>
-    <textarea id="Notas"></textarea>
+    <h1 id="Title">Seu Personagem</h1>
+    <button id="Adicionar_Personagem">Adicionar Personagem</button>
+    <div id="Thumb_Person"></div>
+    <div id="Creater_person">
+        <input type="text" id="Imagem_Personagem" placeholder="Imagem">
+        <textarea placeholder="Aparencia do Personagem" id="Aparencia"></textarea>
+        <textarea placeholder="Notas" id="Notas"></textarea>
+        <button onclick="Salvar_Personagem()">Adicionar o Personagem</button>
+    </div>
     <div id="Form-Inventário">
-        <label>Inventário</label>
         <div id="Conteudo_Inventario"></div>
         <div id="Inventário_Creater">
             <select id="Tipo_Itens"></select>
             <form id="Itens_Creater"></form>
-            <button onclick="Salvar()">Salvar Equipamentos</button>
+            <button id="Salvar_EP" onclick="Salvar()">Salvar Equipamentos</button>
         </div>
-        <button id="Add_Itens">Adicionar</button>
+        <button id="Add_Itens">Adicionar um item no seu inventário</button>
     </div>
-
-
-    <div id="Equip_Personagem"></div>
+    <br>
 </body>
 <script src="../static/script.js"></script>
 </html>
